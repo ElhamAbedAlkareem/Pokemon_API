@@ -50,7 +50,7 @@ def extract_pokemon_details(pokemon_name):
 def read_data_from_json_file():
     try:
         # Open the file and read the JSON data
-        with open(filename, 'r') as file:
+        with open('data.json', 'r') as file:
             data = json.load(file)
             return data  # Move the return statement inside the try block
     except FileNotFoundError:
@@ -70,7 +70,7 @@ def write_pokemon_from_api_to_json_file(pokemon_name):
 
     # Save Pokémon to DB
     # Write the updated data back to the file
-    with open(filename, 'w') as file:
+    with open('data.json', 'w') as file:
         json.dump(data, file, indent=4)
 
 
